@@ -27,7 +27,7 @@
 }
 
 -(IBAction)changeSelectedTextToButtonColor:(UIButton *)sender{
-    
+    //making use NSAttributedString
     //changing the color of the selected text to button touched by the user
     [self.textViewBody.textStorage addAttribute: NSForegroundColorAttributeName
                                           value:sender.backgroundColor
@@ -35,6 +35,20 @@
     
 }
 
+- (IBAction)outlineBodySelection {
+    //To do the outline, we need to set the stroke width and stroke color
+    //so we add more than one NSAttributed properties
+    //NSStrokeWidthAttributeName with a negative value suggests that it will not color the stroke but also fill it
+    [ self.textViewBody.textStorage addAttributes: @{NSStrokeWidthAttributeName: @-3,
+                                                    NSStrokeWidthAttributeName: [UIColor blackColor]}
+                                            range: self.textViewBody.selectedRange];
+}
 
+- (IBAction)unoutlineBodySelection {
+    //remove stroke
+    [self.textViewBody.textStorage removeAttribute:NSStrokeWidthAttributeName range:self.textViewBody.selectedRange];
+    
+    
+}
 
 @end
