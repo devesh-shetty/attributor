@@ -43,6 +43,18 @@
 }
 
 
+- (void)viewWillLayoutSubviews{
+    //viewWillLayoutSubviews and viewDidLayoutSubviews called anytime a sub-views changed and its sub-views were thus re-layed out
+    //for example; autorotation
+    [super viewWillLayoutSubviews];
+}
+//AutoLayout happens between viewWillLayoutSubviews and viewDidLayoutSubviews
+
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
