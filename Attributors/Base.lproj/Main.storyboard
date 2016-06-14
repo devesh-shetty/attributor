@@ -81,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="labelHeader" destination="xHB-EM-Vgj" id="Tgc-vr-FsM"/>
+                        <outlet property="outlineButton" destination="rTj-8V-II3" id="ATp-vI-MeQ"/>
                         <outlet property="textViewBody" destination="WPh-6q-8wt" id="wtW-zf-kty"/>
                     </connections>
                 </viewController>

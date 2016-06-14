@@ -11,6 +11,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textViewBody;
 @property (weak, nonatomic) IBOutlet UILabel *labelHeader;
+@property (weak, nonatomic) IBOutlet UIButton *outlineButton;
 
 @end
 
@@ -23,7 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //Create a mutableAttributedString
+    NSMutableAttributedString *title = [ [ NSMutableAttributedString alloc]
+                                 initWithString: self.outlineButton.currentTitle ];
     
+    //A positive value NSStrokeWidthAttributeName (i.e. 3 in this case) indicates we will only color the stroke and not fill it
+    [title setAttributes:@{NSStrokeWidthAttributeName: @3,
+                           NSStrokeWidthAttributeName: self.outlineButton.tintColor} range:NSMakeRange(0, [title length])];
+    
+    [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
 }
 
 //called just before the view appears on screen
