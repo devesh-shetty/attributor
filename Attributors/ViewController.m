@@ -16,9 +16,14 @@
 
 @implementation ViewController
 
+//After instantiation and outlet setting viewDidLoad is called
+//In the entire lifetime of our controller, viewDidLoad will be called only once
+//At the time this method is called, the geometry of the view and its bounds is not set, so we don't know whether it's an iPhone or iPad
+//So do not initialize things that are geometry-dependent here
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
