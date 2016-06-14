@@ -26,6 +26,23 @@
     
 }
 
+//called just before the view appears on screen
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //do not put one time initialisation code over here
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    //write cleanup code
+    //do not work on time-consuming thing over here to prevent app from becoming sluggish
+    
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
