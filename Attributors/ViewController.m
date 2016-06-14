@@ -39,8 +39,27 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //do not put one time initialisation code over here
+    
+    //what if user opens the app, and then changes the text size from settings and returns back to the app
+    //we won't get that notification
+    //hence, to sync up with user settings we make use of this method
+    [self usePreferredFonts];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self//the object to get notified to
+                                             selector:@selector(preferredFontsChanged:)//the method to call
+                                                 name:UIContentSizeCategoryDidChangeNotification//name of the station/name of the event we want to observe
+                                               object:nil//whose changes you are interested in (nil is anyone's)
+     ];
 }
 
+- (void)preferredFontsChanged:(NSNotification *) notification{
+    [self usePreferredFonts];
+}
+
+-(void)usePreferredFonts{
+    self.textViewBody.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.labelHeader.font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -48,8 +67,12 @@
     //write cleanup code
     //do not work on time-consuming thing over here to prevent app from becoming sluggish
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
     
 }
+
 
 
 - (void)viewWillLayoutSubviews{
