@@ -13,6 +13,7 @@
 		6036633D1D0EBAD200142E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6036633B1D0EBAD200142E18 /* Main.storyboard */; };
 		6036633F1D0EBAD200142E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6036633E1D0EBAD200142E18 /* Assets.xcassets */; };
 		603663421D0EBAD200142E18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603663401D0EBAD200142E18 /* LaunchScreen.storyboard */; };
+		607E4FB31D12E0E000BA8663 /* TextStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607E4FB21D12E0E000BA8663 /* TextStatsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		6036633E1D0EBAD200142E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		603663411D0EBAD200142E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		603663431D0EBAD200142E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607E4FB11D12E0E000BA8663 /* TextStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextStatsViewController.h; sourceTree = "<group>"; };
+		607E4FB21D12E0E000BA8663 /* TextStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextStatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				603663381D0EBAD200142E18 /* ViewController.h */,
 				603663391D0EBAD200142E18 /* ViewController.m */,
 				6036633B1D0EBAD200142E18 /* Main.storyboard */,
+				607E4FB11D12E0E000BA8663 /* TextStatsViewController.h */,
+				607E4FB21D12E0E000BA8663 /* TextStatsViewController.m */,
 				6036633E1D0EBAD200142E18 /* Assets.xcassets */,
 				603663401D0EBAD200142E18 /* LaunchScreen.storyboard */,
 				603663431D0EBAD200142E18 /* Info.plist */,
@@ -153,6 +158,7 @@
 				6036633A1D0EBAD200142E18 /* ViewController.m in Sources */,
 				603663371D0EBAD200142E18 /* AppDelegate.m in Sources */,
 				603663341D0EBAD200142E18 /* main.m in Sources */,
+				607E4FB31D12E0E000BA8663 /* TextStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +307,7 @@
 				603663481D0EBAD200142E18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
