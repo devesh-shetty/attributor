@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9Rg-vl-Bvx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ah9-aT-tSP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test -->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -61,13 +61,6 @@
                                     <action selector="changeSelectedTextToButtonColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NFi-ES-hBD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xHB-EM-Vgj">
-                                <rect key="frame" x="81" y="53" width="158" height="19.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="um8-Qi-Py3">
                                 <rect key="frame" x="153" y="526" width="147" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,15 +72,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Test " id="3Ur-jJ-Tc7">
+                        <barButtonItem key="rightBarButtonItem" title="Stats" id="zd4-4K-380">
+                            <connections>
+                                <segue destination="9Rg-vl-Bvx" kind="push" identifier="Analyze Text" id="kzN-Vs-63R"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="labelHeader" destination="xHB-EM-Vgj" id="Tgc-vr-FsM"/>
                         <outlet property="outlineButton" destination="rTj-8V-II3" id="ATp-vI-MeQ"/>
                         <outlet property="textViewBody" destination="WPh-6q-8wt" id="wtW-zf-kty"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="377"/>
+            <point key="canvasLocation" x="774" y="377"/>
         </scene>
         <!--Text Stats View Controller-->
         <scene sceneID="uFV-wL-ujv">
@@ -114,6 +113,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WXX-Vh-pyc"/>
                     <connections>
                         <outlet property="colorfulCharactersLabel" destination="L11-QJ-c7W" id="MAB-jZ-XzP"/>
                         <outlet property="outlinedCharactersLabel" destination="Xle-tg-20u" id="IXE-Yq-moc"/>
@@ -121,7 +121,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5px-ci-qor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="406"/>
+            <point key="canvasLocation" x="1291" y="377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NED-og-TVz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ah9-aT-tSP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uxc-sR-ZIc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0XU-Vh-673"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxu-xZ-f3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="377"/>
         </scene>
     </scenes>
 </document>

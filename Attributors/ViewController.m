@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TextStatsViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textViewBody;
@@ -116,5 +117,18 @@
     
     
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if( [segue.identifier isEqualToString:@"Analyze Text"]){
+        if([segue.destinationViewController isKindOfClass:[TextStatsViewController class]]){
+            //type-casting is not the same and as strict as JAVA
+            TextStatsViewController *tsvc = (TextStatsViewController *)segue.destinationViewController;
+            tsvc.textToAnalyze = self.textViewBody.textStorage;
+        }
+    }
+    
+}
+
 
 @end
